@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="User Login Page" />
+    <meta name="author" content="" />
+    <title>Login - Project Name</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap CSS (version 3.4.1) -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+    <!-- Custom CSS -->
+    <style>
+        .jumbotron label {
+            font-size: 12px;    
+        }
+        .reg-icon {
+            color: #5bc0de;
+            font-weight: bold;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4) !important;
+        }
+        .nav-pills > li.active > a,
+        .nav-pills > li.active > a:hover,
+        .nav-pills > li.active > a:focus {
+            color: #fff;
+            background-color: #5bc0de;
+        }
+        .prj-name {
+            font-weight: bold;
+            color: #5bc0de;
+        }
+        .jumbotron {
+            padding: 30px;
+        }
+        .form-horizontal {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .btn-info {
+            width: 100%;
+            padding: 10px;
+        }
+        .register-link {
+            margin-top: 15px;
+            display: block;
+            text-align: center;
+            color: #5bc0de;
+            font-size: 14px;
+        }
+        .register-link a {
+            color: #5bc0de;
+            text-decoration: none;
+        }
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container bootstrap snippets bootdey">
+        <!-- Header -->
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li><a href="register.html">Register</a></li>
+                <li class="active"><a href="login.html">Login</a></li>
+            </ul>
+            <h3 class="text-muted prj-name">Seif's Website</h3>
+        </div>
+
+        <!-- Jumbotron with Login Form -->
+        <div class="jumbotron text-center" style="min-height:400px;height:auto;">
+            <div class="col-md-10 col-md-offset-1">
+                <form class="form-horizontal" role="form" method="post" action="login_process.php">
+                    <div class="form-group text-center">
+                        <div class="col-sm-10 col-sm-offset-1 reg-icon">
+                            <span class="fa fa-sign-in fa-3x"> Login</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <button type="submit" class="btn btn-info">
+                                <span class="glyphicon glyphicon-log-in"></span>
+                                Login
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-1 register-link">
+                            <span>Don't have an account? <a href="register.html">Register here</a></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p class="m-0 text-center text-muted">Copyright &copy; Seif's Website</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap core JS (version 3.4.1) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
