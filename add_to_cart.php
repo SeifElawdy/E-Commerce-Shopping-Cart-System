@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require "../shop-homepage/connection/db_con.php";
+require "connection/db_con.php";
 
 
 if(!isset($_SESSION['user_id'])) {

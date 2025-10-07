@@ -6,7 +6,7 @@ if(isset($_SESSION['user_id']) && isset($_SESSION['product_id']) ){
     $user_id=$_SESSION['user_id'];
     $product_id=$_SESSION['product_id'];
 
-    if(isset($_POST['add'])){
+    if($_POST['action'] == "add"){
         $product_id = $_POST['product_ID'];
         $stmt=$connect->prepare("UPDATE `cart` SET `quantity` = quantity + 1 WHERE user_id = ? AND `product_id`=?;");
         $stmt->execute([$user_id,$product_id]);
@@ -14,7 +14,7 @@ if(isset($_SESSION['user_id']) && isset($_SESSION['product_id']) ){
         exit();
     }
 
-    if(isset($_POST['del'])){
+    if($_POST['action'] == "del" ){
         $product_id = $_POST['product_ID'];
         $stmt = $connect->prepare("UPDATE `cart` SET `quantity` = `quantity` - 1 WHERE `user_id` = ? AND `product_id` = ? AND `quantity` > 1;");
         $stmt->execute([$user_id, $product_id]);
@@ -23,6 +23,8 @@ if(isset($_SESSION['user_id']) && isset($_SESSION['product_id']) ){
     }
 
     if(isset($_GET['delete'])){
+        
+        $product_id = $_GET['product_ID'];
         
         $stmt=$connect->prepare("DELETE FROM `cart` WHERE `cart`.`user_id` = ? AND `cart`.`product_id` = ?");
         $stmt->execute([$user_id,$product_id]);

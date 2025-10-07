@@ -1,9 +1,9 @@
 <?php 
 
-$host="localhost";
-$dbname="shop";
-$user="root";
-$pass="";
+$host="sql105.infinityfree.com";
+$dbname="if0_39943001_shop";
+$user="if0_39943001";
+$pass="oWFikf4wC5eA";
 $dsn="mysql:host=$host;dbname=$dbname";
 
 try{
